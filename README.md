@@ -34,6 +34,21 @@ You can now access the Client side project in your browser by navigating to the 
 ng build
 The ng build command is used to compile an Angular project into output files that can be served by a web server. 
 
+StickyNotes Key Features : 
+1.Create, Edit, and Delete Notes:
+  .Users can create new sticky notes.
+  .Edit existing notes to update content or change colors.
+  .Delete notes when they are no longer needed.
+2.Search Based on Title:
+  .Ability to search for notes based on their titles.
+  .Provides quick access to specific notes by entering keywords.
+3.Search Based on Category:
+  .Categorize notes and search within specific categories.
+  .Organize and filter notes by predefined categories for better organization.
+4.Drag-and-Drop Reordering:
+  .Notes can be easily rearranged using drag-and-drop functionality.
+  .Users can prioritize or group related notes by dragging them into preferred positions.
+
 Additional Notes:
 For any queries or support, feel free to contact the author via email (yuvaraj1346632@gmail.com).
 If you encounter any issues with the extension, please refer to the GitHub repository for potential updates or bug fixes.
