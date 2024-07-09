@@ -1,8 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 .customize{
-    width: 95vh;
+    width: 100vh;
     margin: auto;
     padding: 2%;
+}
+@media screen and (max-width: 480px) {
+    .customize{
+        width: auto;
+    }  
 }
 .bg-none{
     background: none;
