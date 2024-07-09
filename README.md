@@ -1,27 +1,43 @@
-# StickyNotes
+LIVE DEMO
+https://userstickynotes.netlify.app/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+Overview:
+StickyNotes is a user-friendly web application developed in Angular, designed for effortless organization of tasks and ideas. It features a simple interface allowing users to create, edit, and organize digital sticky notes. Each note is customizable with various colors and supports easy drag-and-drop functionality for rearranging. With its intuitive features and responsive design, StickyNotes enhances productivity by providing a seamless way to capture and manage thoughts digitally. Built using Angular, it ensures robust performance and scalability, making it a reliable tool for users to streamline their daily planning and information management tasks.
 
-## Development server
+Version Overview:
+Angular : v16.2.14
+Node : v21.3.0
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Installation:
+To get started with the Weekday Project, follow these steps:
 
-## Code scaffolding
+Open your terminal or command prompt on your computer.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Navigate to the directory where you want to clone the repository. You can do this using the cd command followed by the directory path. For example:
 
-## Build
+cd path/to/your/directory
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Once you're in the desired directory, use the following command to clone the repository: git clone https://github.com/Yuvi1530-dev/user_sticky_-notes
 
-## Running unit tests
+Press Enter. Git will begin cloning the repository to your local machine.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+After the cloning process is complete, navigate into the cloned directory using the cd command:
+cd user_sticky_-notes
 
-## Running end-to-end tests
+After you have cloned the repository, install the required dependencies by running the following command:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+npm install
+Once the dependencies are installed, start the Vite server by running the following command:
+ng serve
+You can now access the Client side project in your browser by navigating to the specified address (usually http://localhost:4200
 
-## Further help
+ng build
+The ng build command is used to compile an Angular project into output files that can be served by a web server. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Additional Notes:
+For any queries or support, feel free to contact the author via email (yuvaraj1346632@gmail.com).
+If you encounter any issues with the extension, please refer to the GitHub repository for potential updates or bug fixes.
+Author:
+Yuvaraj K
+
+Email: yuvara1346632@gmail.com
