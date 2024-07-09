@@ -13,7 +13,7 @@
                 <textarea type="text" class="form-control"  formControlName="content" placeholder="Notes content"></textarea>
                 <div class="error" *ngIf="submit && f['content'].errors">
                     <p class="text-danger" *ngIf="submit && f['content'].errors['required']">Content is required</p>
-                    <p class="text-danger" *ngIf="submit && f['content'].errors['minlength']">Content must be 40 characters</p>
+                    <p class="text-danger" *ngIf="submit && f['content'].errors['minlength']">Content must be 20 characters</p>
                 </div>
             </div>
             <div class="mb-3">

@@ -64,5 +64,8 @@ export class NotesListComponent implements OnInit {
     localStorage.setItem('notes_data', JSON.stringify(this.listNotes) || '[]');
     this.toaster.getToastMessage("Success","success","Position modified successfully")
   }
+  getValues(data:any){
+console.log(data,"dat")
+  }
 
 }

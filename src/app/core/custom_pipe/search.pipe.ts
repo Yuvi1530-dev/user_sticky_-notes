@@ -15,11 +15,12 @@ export class SearchPipe implements PipeTransform {
     if (!data || data.trim() === '') {
       return of(value);
     }
-    return this.service.searchText.pipe(
+    let result;
+     result = this.service.searchText.pipe(
       debounceTime(300),
       distinctUntilChanged(),
       map((searchText: string) => {
-        return value.filter(item => {
+        return value.filter((item : any) => {
           const currentItem = item[searchKey];
           if(currentItem.toString().toLowerCase().includes(searchText.trim().toLowerCase()) && type && item.category==type){
             return currentItem.toString().toLowerCase().includes(searchText.trim().toLowerCase());
@@ -30,5 +31,6 @@ export class SearchPipe implements PipeTransform {
         });
       })
     )
+    return result;
   }
 }

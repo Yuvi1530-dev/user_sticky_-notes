@@ -19,13 +19,16 @@
                     </select>
                 </div>
             </div>
+            <div *ngIf="(listNotes | search : searchText:'title':filterType | async) as filterdData">
+                <h5 class="text-center text-danger" *ngIf="filterdData.length==0 && searchText!=''">No Notes Available!</h5>
+            </div>
             <div class="col-md-4 col-lg-4 col-sm-12 mt-2"
                 *ngFor="let data of listNotes | search : searchText:'title':filterType | async;let index = index;"
                 draggable="true" (dragstart)="onDragStart($event, index,data.id,data.index)"
                 (dragover)="onDragOver($event, index,data.id,data.index)"
                 (drop)="onDrop($event, index,data.id,data.index)">
 
-                <div class="card" *ngIf="listNotes.length!=0">
+                <div class="card card_height" *ngIf="listNotes.length!=0">
                     <div class="card-header bg-none d-flex justify-content-between">
                         <h4 class="text-danger font_size_hand"> {{data.title}}</h4>
                         <span [ngClass]="this.service.notesType(data.category)?.class"
