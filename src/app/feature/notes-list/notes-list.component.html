@@ -1,0 +1,53 @@
+<!-- 
+<input type="text" [(ngModel)]="searchText">
+<ul>
+    <li *ngFor="let data of listNotes | search : searchText:'title';let index = index;">{{data.id}}</li>
+</ul>
+<p>{{searchText}}</p> -->
+
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 mt-3">
+                <div class="search_wrap">
+                    <input type="text" class="form-control" [(ngModel)]="searchText" (keyup)="searchByTitle($event)"
+                        placeholder="Search">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 mt-3">
+                <div class="mb-3 filter_wrap" *ngIf="searchText!=''">
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="filterType"
+                        (change)="selectFilter($event)">
+                        <option selected value="">Select Category</option>
+                        <option value="1">Important</option>
+                        <option value="2">Moderate</option>
+                        <option value="3">Do it later</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-12 mt-2"
+                *ngFor="let data of listNotes | search : searchText:'title':filterType | async;let index = index;">
+                <div class="card" *ngIf="listNotes.length!=0">
+                    <div class="card-header bg-none d-flex justify-content-between">
+                        <h4 class="text-danger font_size_hand"> {{data.title}}</h4>
+                        <span [ngClass]="this.service.notesType(data.category)?.class"
+                            class="height_fit">{{this.service.notesType(data.category)!=undefined ?
+                            this.service.notesType(data.category)?.type : ''}}</span>
+                    </div>
+                    <div class="card-body">
+                        {{this.hideMaximunWords(data.content)}}...
+                    </div>
+                    <div class="card-footer">
+                        <div class="wrapper">
+                                <button class="btn btn_out btn-danger" (click)="deleteNotes(data.index,data.id)"><span><i class="fa fa-trash-o"></i></span></button>
+                                <button class="btn btn_out btn-info" (click)="EditNotes(data.index,data.id)"><span><i class='fa fa-edit'></i></span></button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

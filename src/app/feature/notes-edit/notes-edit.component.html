@@ -1,0 +1,39 @@
+<section>
+
+    <div class="container">
+       <div class="card customize">
+        <form [formGroup]="editNotes">
+            <div class="mb-3">
+                <input type="text" class="form-control" formControlName="title" [(ngModel)]="NotesDetails.title" placeholder="Notes Title">
+                <div class="error" *ngIf="submit && edit['title'].errors">
+                    <p class="text-danger" *ngIf="submit && edit['title'].errors['required']">Title is required</p>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control"  formControlName="content" [(ngModel)]="NotesDetails.content" placeholder="Notes content">
+                <div class="error" *ngIf="submit && edit['content'].errors">
+                    <p class="text-danger" *ngIf="submit && edit['content'].errors['required']">Content is required</p>
+                    <p class="text-danger" *ngIf="submit && edit['content'].errors['minlength']">Content must be 100 characters</p>
+                </div>
+            </div>
+            <div class="mb-3">
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="NotesDetails.category" formControlName="category">
+                    <option selected value="">Select Category</option>
+                    <option value="1">Important</option>
+                    <option value="2">Moderate</option>
+                    <option value="3">Do it later</option>
+                  </select>
+                  <div class="error" *ngIf="submit && edit['category'].errors">
+                    <p class="text-danger" *ngIf="submit && edit['category'].errors['required']">Category is required</p>
+                </div>
+            </div>
+            <div class="btn_wrraper">
+                <button class="btn btn-primary" (click)="updateForm()">
+                    Update Notes
+                </button>
+            </div>
+           
+        </form>
+       </div> 
+    </div>
+</section>

@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+.customize{
+    width: 50%;
+    margin: auto;
+    padding: 2%;
+}
+.bg-none{
+    background: none;
+    border: none;
+}
+.bg-none h4{
+    text-align: center;
+}
+.card{
+    box-shadow: 0 0 15px rgb(209 209 209 / 85%);
+    border-radius: 10px;
+}
+.height_fit{
+    height: fit-content;
+}
+.font_size_hand{
+    text-transform: uppercase;
+    font-size: 21px;
+}
