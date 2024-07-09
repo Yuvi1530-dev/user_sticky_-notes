@@ -66,13 +66,9 @@ export class NotesService {
   removeNotes(index: number, id: string) {
     let notesStorage = JSON.parse(localStorage.getItem("notes_data") || "[]");
     return new Promise((resolve, reject) => {
-      if (notesStorage.length != 1) {
         notesStorage.splice(notesStorage.findIndex((value: any) => value.id === id), 1);
         localStorage.setItem('notes_data', JSON.stringify(notesStorage));
         resolve({"status":"1"})
-      }else{
-        resolve({"status":"0"})
-      }
     })
     
   }
