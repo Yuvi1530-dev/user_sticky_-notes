@@ -61,7 +61,8 @@ export class NotesListComponent implements OnInit {
     this.listNotes[index]['index'] = this.dargedIndex;
     this.listNotes.splice(this.dragStartIndex, 1);
     this.listNotes.splice(index, 0, draggedItem);
-    localStorage.setItem('notes_data', JSON.stringify(this.listNotes) || '[]')
+    localStorage.setItem('notes_data', JSON.stringify(this.listNotes) || '[]');
+    this.toaster.getToastMessage("Success","success","Position modified successfully")
   }
 
 }
