@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotesAddComponent } from './feature/notes-add/notes-add.component';
-import { NotesListComponent } from './feature/notes-list/notes-list.component';
-const routes: Routes = []
+import { FeatureRoutingModule } from './feature/feature-routing.module';
+
+const routes: Routes = [{
+  path:'',
+  loadChildren:() => import('./feature/feature-routing.module').then(mod => mod.FeatureRoutingModule)
+}]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
