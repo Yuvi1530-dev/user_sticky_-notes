@@ -20,7 +20,7 @@ export class NotesService {
     let notesStorage = JSON.parse(localStorage.getItem("notes_data") || "[]");
     let result = new Promise((resolve, reject) => {
       if (notesStorage.length != 0) {
-        let notes_list = Object.assign(data, { 'index': notesStorage.length + 1, 'id': this.generateRandomNumber(6) })
+        let notes_list = Object.assign(data, { 'index': notesStorage[notesStorage.length - 1]['index']+1, 'id': this.generateRandomNumber(6) })
         notesStorage.push(notes_list);
         localStorage.setItem('notes_data', JSON.stringify(notesStorage));
       } else {

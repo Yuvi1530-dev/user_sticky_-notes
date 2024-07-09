@@ -33,7 +33,8 @@ export class NotesAddComponent implements OnInit {
       }
       this.service.addNotes(addNotes).then((response: any) => {
         if (response.status == 1) {
-          this.toaster.getToastMessage("Sucess", "success", response.message)
+          this.toaster.getToastMessage("Sucess", "success", response.message);
+          this.notesAdd.reset()
         }
       })
     }
