@@ -12,7 +12,7 @@ export class NotesAddComponent implements OnInit {
   constructor(private fb: FormBuilder, private service: NotesService, private toaster: ToasterService) {
     this.notesAdd = this.fb.group({
       title: ['', Validators.required],
-      content: ['', [Validators.required, Validators.minLength(100)]],
+      content: ['', [Validators.required, Validators.minLength(40)]],
       category: ['', Validators.required]
     })
   }
