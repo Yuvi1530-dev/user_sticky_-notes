@@ -9,7 +9,7 @@ Angular : v16.2.14
 Node : v21.3.0
 
 Installation:
-To get started with the Weekday Project, follow these steps:
+To get started with the UserStickyNotes Project, follow these steps:
 
 Open your terminal or command prompt on your computer.
 
