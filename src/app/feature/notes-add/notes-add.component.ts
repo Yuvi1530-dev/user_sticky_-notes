@@ -9,6 +9,7 @@ import { NotesService, NotesList, ToasterService } from "../../core/service";
 export class NotesAddComponent implements OnInit {
   notesAdd!: FormGroup;
   submit: boolean = false;
+  listCategory =[{'title':'Select Category','value': ""},{'title':'Important','value': "1"},{'title':'Moderate','value': "2"},{'title':'Do it later','value': '3'}]
   constructor(private fb: FormBuilder, private service: NotesService, private toaster: ToasterService) {
     this.notesAdd = this.fb.group({
       title: ['', Validators.required],

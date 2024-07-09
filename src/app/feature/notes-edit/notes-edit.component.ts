@@ -11,6 +11,7 @@ export class NotesEditComponent implements OnInit {
   editNotes !: FormGroup;
   NotesDetails!: NotesList;
   submit : boolean =false;
+  listCategory =[{'title':'Select Category','value': ""},{'title':'Important','value': "1"},{'title':'Moderate','value': "2"},{'title':'Do it later','value': '3'}]
   constructor(private router: ActivatedRoute, private service: NotesService, private toaster: ToasterService,private fb : FormBuilder,private navigate : Router) {
     this.router.snapshot.paramMap.get('id');
     this.editNotes = this.fb.group({

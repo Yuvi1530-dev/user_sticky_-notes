@@ -18,10 +18,10 @@
             </div>
             <div class="mb-3">
                 <select class="form-select" aria-label="Default select example" [(ngModel)]="NotesDetails.category" formControlName="category">
-                    <option selected value="">Select Category</option>
-                    <option value="1">Important</option>
+                    <option *ngFor="let item of listCategory" [value]="item.value">{{item.title}}</option>
+                    <!-- <option value="1">Important</option>
                     <option value="2">Moderate</option>
-                    <option value="3">Do it later</option>
+                    <option value="3">Do it later</option> -->
                   </select>
                   <div class="error" *ngIf="submit && edit['category'].errors">
                     <p class="text-danger" *ngIf="submit && edit['category'].errors['required']">Category is required</p>
